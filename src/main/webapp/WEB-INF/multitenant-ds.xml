@@ -1,0 +1,34 @@
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.jboss.org/ironjacamar/schema http://docs.jboss.org/ironjacamar/schema/datasources_1_0.xsd">
+    <datasource jndi-name="java:jboss/datasources/MultitenatDS"
+                pool-name="multitenant-pool" enabled="true"
+                use-java-context="true">
+        <!--
+        <connection-url>jdbc:h2:mem:multitenat;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1</connection-url>
+        <driver>h2</driver>
+        <connection-url>jdbc:postgresql:localhost/35432/</connection-url>
+        <driver-class>org.postgresql.Driver</driver-class>
+        -->
+        <connection-url>jdbc:postgresql://localhost:35432/MULTITENANT</connection-url>
+        <driver>postgres</driver>
+        <!--
+        <security>
+            <user-name>multitenant</user-name>
+            <password>geheim</password>
+        </security>
+        -->
+        <security>
+            <user-name>tenant</user-name>
+            <password>tenant_geheim</password>
+        </security>
+    </datasource>
+    <!--
+    <drivers>
+        <driver name="postgresql">
+            <driver-class>org.postgresql.Driver</driver-class>
+            <datasource-class>org.postgresql.ds.PGSimpleDataSource</datasource-class>
+        </driver>
+    </drivers>
+    -->
+</datasources>

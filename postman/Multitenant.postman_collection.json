@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "a303ea9e-68e4-4a1e-b59d-1c18adeef45a",
+		"name": "Multitenant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28371404",
+		"_collection_link": "https://crimson-crater-298537.postman.co/workspace/Multitenant~b8acee4e-ab62-4a78-b3f3-d05ab4cfa084/collection/28371404-a303ea9e-68e4-4a1e-b59d-1c18adeef45a?action=share&source=collection_link&creator=28371404"
+	},
+	"item": [
+		{
+			"name": "store list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tenant",
+						"value": "sascha",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "tenant",
+						"value": "mathema",
+						"type": "text"
+					},
+					{
+						"key": "tenant",
+						"value": "campus",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "tenant",
+						"value": "jax",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/multitenant-service/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"multitenant-service",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store add value",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "tenant",
+						"value": "sascha",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "tenant",
+						"value": "mathema",
+						"type": "text"
+					},
+					{
+						"key": "tenant",
+						"value": "campus",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "tenant",
+						"value": "jax",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/multitenant-service/store/{{$timestamp}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"multitenant-service",
+						"store",
+						"{{$timestamp}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
