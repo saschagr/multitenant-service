@@ -19,9 +19,6 @@ import java.util.List;
 @Dependent
 @Interceptors(TenantInterceptor.class)
 public class StoreService {
-    @Inject
-    private TenantService tenantService;
-
     @PersistenceContext
     private EntityManager entityManager;
 

@@ -16,8 +16,6 @@ import java.util.List;
 @Path("store")
 @Transactional
 public class StoreResource {
-    @Inject
-    private TenantService tenantService;
 
     @Inject
     private StoreService storeService;
@@ -33,5 +31,4 @@ public class StoreResource {
     public void put(@PathParam("value") String value) {
         storeService.setValue(value);
     }
-
 }
